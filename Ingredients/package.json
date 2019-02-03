@@ -19,7 +19,7 @@
     "webpack-dev-server": "^3.1.14"
   },
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --hot --mode=development",
     "build": "webpack --mode production"
   },
   "author": "",
