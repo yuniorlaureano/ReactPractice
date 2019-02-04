@@ -15,6 +15,5 @@ module.exports = {
                 loader: 'babel-loader'
             }
         ]
-    },
-    devServer: path.resolve(__dirname, '/src')
+    }
 }
