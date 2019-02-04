@@ -1,5 +1,5 @@
 const path = require('path');
-
+//webpack
 module.exports = {
     entry: './src/index.js',
     output: {
