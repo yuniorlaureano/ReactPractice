@@ -1,4 +1,5 @@
 const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 //webpack
 module.exports = {
     entry: './src/index.js',
@@ -13,7 +14,24 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader'
+            },
+            {
+                test: /\.css$/,
+                use:['style-loader', 'css-loader', {
+                    loader:'postcss-loader',
+                    options:{
+                        plugins: () => [require('autoprefixer')]
+                    }
+                }] 
             }
+        ]
+    },
+    optimization:{
+        minimizer:[
+            new UglifyJsPlugin({
+                sourceMap: true,
+                warnings: false
+            })
         ]
     }
 }
