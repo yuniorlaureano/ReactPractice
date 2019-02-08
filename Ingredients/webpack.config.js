@@ -29,8 +29,7 @@ module.exports = {
     optimization:{
         minimizer:[
             new UglifyJsPlugin({
-                sourceMap: true,
-                warnings: false
+                sourceMap: true
             })
         ]
     }
