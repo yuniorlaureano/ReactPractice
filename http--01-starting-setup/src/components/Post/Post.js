@@ -1,5 +1,5 @@
 import React from 'react';
-
+//import {withRouter} from 'react-router-dom';
 import './Post.css';
 
 const post = (props) => (
@@ -12,3 +12,5 @@ const post = (props) => (
 );
 
 export default post;
+//Makin the post aware of the properties of its parent from router
+//export default withRouter(post);
